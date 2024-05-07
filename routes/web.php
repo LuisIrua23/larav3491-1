@@ -26,5 +26,3 @@ Route::put('curso/{curso}',[CursoController::class,'update'])->name('curso.updat
 Route::delete('curso/{curso}',[CursoController::class,'destroy'])->name('curso.destroy');
 Route::get('curso/{curso}/editar',[CursoController::class,'edit'])->name('curso.edit');
 
-dddfdfdfd
-jhnhnhnhnhnh
