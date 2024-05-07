@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/suma/{dato1}/{dato2}',[CalculadoraController::class,'suma']);
 // Route::get('/primo/{dato1}',[CalculadoraController::class,'primo']);
 
-Route::get('cursos/listar',[CursoController::class,'listar'])->name('curso.listar');
+Route::get('curso/listar',[CursoController::class,'listar'])->name('curso.listar');
 Route::get('curso/create',[CursoController::class,'create']);
 Route::post('curso/store', [CursoController::class,'store'])->name('curso.store');
 Route::get('curso/{curso}',[CursoController::class,'show'])->name('curso.show');
