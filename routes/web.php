@@ -27,3 +27,4 @@ Route::delete('curso/{curso}',[CursoController::class,'destroy'])->name('curso.d
 Route::get('curso/{curso}/editar',[CursoController::class,'edit'])->name('curso.edit');
 
 dddfdfdfd
+jhnhnhnhnhnh
