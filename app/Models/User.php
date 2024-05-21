@@ -42,4 +42,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function user()
+
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
+    // public function post()
+
+    // {
+    //     return $this->hasMany('App\Models\Post');
+    // }
+
+// Relacion Uno a Muchos
+public function posts(){
+   return $this->hasMany('App\Models\Post');//RECUPERAR LA COLECCION DE POST QUE PERTENECEN A ESTE USUARIO
+}
 }

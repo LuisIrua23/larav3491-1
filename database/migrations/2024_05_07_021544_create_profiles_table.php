@@ -14,23 +14,17 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
 
-            Schema::create('profiles', function (Blueprint $table) {
-                $table->id();
+            $table->string('title',45);
+            $table->text('biografia');
+            $table->string('website',45);
+            //creamos el campo para albergar la llave foranea
+            $table->unsignedBigInteger('user_id')->unique();
 
-                $table->string('title',45);
-                $table->text('biografia');
-                $table->string('website',45);
-                //creamos el campo para albergar la llave foranea
-                $table->unsignedBigInteger('user_id')->unique();
-
-                $table->foreign('user_id')
-                    ->references('id')
-                    ->on('users')
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
-
-                $table->timestamps();
-            });
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->timestamps();
         });
